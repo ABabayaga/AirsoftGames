@@ -1,14 +1,18 @@
 <template>
-  <div id="app">
+  <div>
     <v-toolbar>
       <v-toolbar-title>Airsoft Games</v-toolbar-title>
 
       <v-spacer></v-spacer>
       
-      <v-toolbar-items v-for="item in items" :key="item.title" :to="item.route" app>
-       <v-btn > {{item.title}} </v-btn> 
+     
+       <v-toolbar-items v-for="item in items" :key="item.title" app>
+       <v-btn :to="item.route" > {{item.title}} </v-btn> 
       
       </v-toolbar-items>
+
+      
+     
 
       
 
@@ -32,7 +36,7 @@
 
 <script>
 export default {
-  name: 'App',
+  
   props: {
     source: String
   },
@@ -40,11 +44,15 @@ export default {
     items: [
       {
         title: "Home",
-        route: "/home"
+        route: "/"
       },
       {
         title: "Sobre",
-        route: "/sobre"
+        route: "/Sobre"
+      },
+      {
+        title: "Galeria",
+        route: "/Galeria"
       }
     ]
   }),
